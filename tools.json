@@ -1,0 +1,66 @@
+[
+  {
+    "name": "from_timestamp",
+    "description": "Convert a Unix timestamp to an ISO-8601 UTC date + human forms. Auto-detects seconds vs milliseconds by magnitude (override with `unit`). Keyless, offline.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "timestamp": {
+          "type": "number",
+          "description": "Unix timestamp."
+        },
+        "unit": {
+          "type": "string",
+          "description": "\"s\" or \"ms\" (default: auto-detect)."
+        }
+      },
+      "required": [
+        "timestamp"
+      ]
+    }
+  },
+  {
+    "name": "to_timestamp",
+    "description": "Convert an ISO-8601 (or other parseable) date string to a Unix timestamp (seconds + milliseconds). Keyless, offline.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "description": "A date/time string, e.g. \"2026-07-01T12:00:00Z\"."
+        }
+      },
+      "required": [
+        "date"
+      ]
+    }
+  },
+  {
+    "name": "now",
+    "description": "The current UTC time as ISO-8601 and Unix timestamp (seconds + milliseconds).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  },
+  {
+    "name": "relative_time",
+    "description": "Humanize a date/time relative to now (or a given `from`): \"2 hours ago\", \"in 3 days\". Keyless, offline.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "description": "The target date/time (ISO-8601 or Unix timestamp)."
+        },
+        "from": {
+          "type": "string",
+          "description": "Optional reference time (default: now)."
+        }
+      },
+      "required": [
+        "date"
+      ]
+    }
+  }
+]
