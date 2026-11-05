@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-timestamp",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Unix timestamp MCP.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "timestamp",
     "gatewaySlug": "timestamp",
-    "sourceHash": "v1-6dd85d95df80476f580b8b9f2066a5fd2e4825ef8f264ad15db99403c423fc3e",
-    "sourceCommit": "f47d581679e1e887373df51ba623f891fbe4c464"
+    "sourceHash": "v1-9e299e99d1653d643e3d1929896f05abd72b772829d929e77c8e22bd7a1b8786",
+    "sourceCommit": "868e119d526d5409447b7ee2149afba7eb9d2593"
   }
 }
